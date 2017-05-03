@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ContextMenuItem from './ContextMenuItem';
+import './style.css';
 
 /**
  * This component add a contextmenu event listener, allowing to show a custom menu on right click.
@@ -92,9 +93,8 @@ export default class ComponentWithContextMenu extends Component {
                 {children}
                 <div hidden={!this.state.isMenuVisible} ref={ref => {
                     this.contextMenuRoot = ref
-                }} className="contextMenu"> {options.map((option, idx) => {
-                    <ContextMenuItem {...option}/>
-                })}
+                }} className="contextMenu">
+                    {options.map((option,idx) => <ContextMenuItem key={idx} {...option}/>)}
                 </div>
             </div>
         );
@@ -103,7 +103,7 @@ export default class ComponentWithContextMenu extends Component {
 
 ComponentWithContextMenu.propTypes = {
     id: PropTypes.string.isRequired,
-    options: PropTypes.arrayOf(PropTypes.shape({label: PropTypes.string.isRequired, onClick: PropTypes.func.isRequired, active: PropTypes.boolean})).isRequired,
+    options: PropTypes.array.isRequired,
     onClick: PropTypes.func,
     className: PropTypes.string
 };
