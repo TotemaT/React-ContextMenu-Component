@@ -89,3 +89,14 @@ Temporary Items
 .apdisk
 
 # End of https://www.gitignore.io/api/osx,node
+
+
+*.swp
+*~
+*.iml
+.*.haste_cache.*
+.DS_Store
+.idea
+npm-debug.log
+node_modules
+dist/
