@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContextMenuItem = ({separator, label, onClick, disabled}) => {
-    if (separator) {
-        return <div className="contextMenu--separator"/>;
-    }
+const ContextMenuItem = ({label, onClick, disabled}) => {
     let className = 'contextMenu--option';
     if (disabled) {
         className += ' contextMenu--option__disabled';
@@ -17,16 +14,14 @@ const ContextMenuItem = ({separator, label, onClick, disabled}) => {
 };
 
 ContextMenuItem.propTypes = {
-    separator: PropTypes.bool,
-    label: PropTypes.string,
+    label: PropTypes.string.required,
     onClick: PropTypes.func,
     disabled: PropTypes.bool
 }
 
 ContextMenuItem.defaultProps = {
-    separator: false,
     label: '',
-    onClick: () => {},
+    onClick: () => { /* no-op */},
     disabled: false
 }
 

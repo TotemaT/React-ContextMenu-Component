@@ -2,9 +2,63 @@
 
 React component that adds a context menu to any component
 
-## How to use
+## Quick start
+The only component needed to add a context menu is `<ContextMenu />`. To use it, simply wrap the component that needs to have a context menu with the ContextMenu component like so :
+
+```
+import ContextMenu from 'react-contextmenu-component';
+
+<ContextMenu
+  id="some-id"
+  options={[]}
+>
+  <p>I'm inside a div with a context menu :)</p>
+</ContextMenu>
+```
+
+### ContextMenu required props
+
+The ContextMenu component **has** to have the following props :
+
+#### id - string
+
+**id** defines the identifier that allows to check if the right click has been made on the given ContextMenu component.
+
+#### options - array
+
+**options** defines all the options that have to be shown in the context menu. It is an array of arrays of option (see below). Each array in **options** will be rendered as a block followed by a separator.
+
+##### option
+An option is a single item rendered in the context menu. It contains the following properties :
+
+| Property | Type    | Explanation                                           | Default |
+| -------: | :-----: | :---------------------------------------------------- | :------ |
+| label    | string  | Label of the option, as seen in the context menu.     | N/A     |
+| onClick  | func    | Function to fire when the option is option is clicked | no op   |
+| disabled | boolean | Whether the option is disabled                        | false   |
 
 
+### ContextMenu optional props
+
+The ContextMenu component **can** have the following props :
+
+#### onClick
+
+**onClick** defines the method to fire when the div is left clicked.
+
+#### className
+
+**className** defines the CSS class(es) to use on the rendered div, which allows to easily style your component.
+
+### Style
+
+The context menu is easy to style; all you have to do is override the following classes :
+
+| class | Component aimed |
+|-----: | :-------------- |
+| .contextMenu | The whole context menu |
+| .contextMenu--option[:hover &#124; :active &#124; __disabled] | One option of the context menu |
+| .contextMenu--separator | A separator |
 
 ## Try it
 
@@ -32,6 +86,6 @@ The item is hovered :
 - [ ] Test ContextMenuList
 - [ ] Test ContextMenuSeparator (or not)
 - [X] Publish on npm
-- [ ] Write a quick start guide
+- [X] Write a quick start guide
 - [X] Add a sample
 - [X] Add screenshots
