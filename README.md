@@ -80,6 +80,12 @@ The context menu is shown after a right click :
 The item is hovered :
 ![Context Menu item hovered](./sample/screenshots/3-selected.png "Context Menu item hovered")
 
+# Thanks
+
+- This module has been created using [React-NPM-Boilerplate](https://github.com/juliancwirko/react-npm-boilerplate)
+- The style and code is based on this [codepen](https://codepen.io/devhamsters/pen/yMProm)
+- The sample project has been created using [Create-React-App](https://github.com/facebookincubator/create-react-app)
+
 # Todo
 
 - [ ] Test ContextMenu
