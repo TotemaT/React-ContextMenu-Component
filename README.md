@@ -18,7 +18,7 @@ Run the sample app with the following commands
 
 ## Screenshots
 
-The div shown underneath is rendered using <ContextMenu /> :
+The div shown underneath is rendered using `<ContextMenu />` :
 ![Context Menu before click](./sample/screenshots/1-before.png "Context Menu before click")
 The context menu is shown after a right click :
 ![Context Menu after right click](./sample/screenshots/2-shown.png "Context Menu after click")
