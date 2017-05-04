@@ -1,4 +1,5 @@
-# React-ContextMenu-Component
+# React-ContextMenu-Component 
+[![npm version](https://badge.fury.io/js/react-contextmenu-component.svg)](https://badge.fury.io/js/react-contextmenu-component) [![npm](https://img.shields.io/npm/l/react-contextmenu-component.svg)]()
 
 React component that adds a context menu to any component
 
