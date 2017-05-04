@@ -2454,9 +2454,13 @@ https-browserify@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-0.0.1.tgz#3f91365cabe60b77ed0ebba24b454e3e09d95a82"
 
-iconv-lite@0.4.13, iconv-lite@~0.4.13:
+iconv-lite@0.4.13:
   version "0.4.13"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
+
+iconv-lite@~0.4.13:
+  version "0.4.17"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.17.tgz#4fdaa3b38acbc2c031b045d0edcdfe1ecab18c8d"
 
 icss-replace-symbols@^1.0.2:
   version "1.0.2"
@@ -4137,9 +4141,9 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-contextmenu-component@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/react-contextmenu-component/-/react-contextmenu-component-0.1.0.tgz#3ae40447f67c061122bf854cfc894cb0905a21ed"
+react-contextmenu-component@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/react-contextmenu-component/-/react-contextmenu-component-0.1.1.tgz#824338e4cc8c4a12bf7932a3f9cf0e92490b25ae"
   dependencies:
     babel-runtime "^6.6.1"
     prop-types "^15.5.8"
