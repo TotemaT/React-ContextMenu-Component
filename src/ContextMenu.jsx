@@ -7,7 +7,7 @@ import './style.css';
 /**
  * This component add a contextmenu event listener, allowing to show a custom menu on right click.
  */
-export default class ComponentWithContextMenu extends Component {
+export default class ContextMenu extends Component {
     constructor() {
         super();
         this.handleContextMenu = this.handleContextMenu.bind(this);
@@ -30,7 +30,7 @@ export default class ComponentWithContextMenu extends Component {
 
     handleGlobalContextMenu(event) {
         const {isMenuVisible} = this.state;
-        const wasOutside = !(event.target.id === this.props.id);
+        const wasOutside = !(this.root.contains(event.target));
 
         if (wasOutside) {
             if (isMenuVisible) {
@@ -76,7 +76,7 @@ export default class ComponentWithContextMenu extends Component {
 
     handleClick(event) {
         const {isMenuVisible} = this.state;
-        const wasOutside = !(event.target.contains === this.contextMenuRoot);
+        const wasOutside = !(this.contextMenuRoot.contains(event.target));
 
         if (wasOutside && isMenuVisible) {
             this.setState({isMenuVisible: false});
@@ -90,11 +90,9 @@ export default class ComponentWithContextMenu extends Component {
         }
 
         return (
-            <div id={id} onClick={onClick} className={className}>
+            <div id={id} onClick={onClick} className={className} ref={ref => this.root = ref}>
                 {children}
-                <div hidden={!this.state.isMenuVisible} ref={ref => {
-                    this.contextMenuRoot = ref
-                }} className="contextMenu">
+                <div hidden={!this.state.isMenuVisible} ref={ref => this.contextMenuRoot = ref} className="contextMenu">
                     <ContextMenuList options={options}/>
                 </div>
             </div>

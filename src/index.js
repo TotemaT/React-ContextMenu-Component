@@ -1,2 +1,2 @@
-import ComponentWithContextMenu from './ComponentWithContextMenu';
-export default ComponentWithContextMenu;
+import ContextMenu from './ComponentWithContextMenu';
+export default ContextMenu;
