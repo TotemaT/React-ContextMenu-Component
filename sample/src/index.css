@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.context-menu-container {
+  width: 50%;
+  margin: 40px auto;
+  padding: 16px;
+  border: 1px solid black;
+  text-align: center;
+}
