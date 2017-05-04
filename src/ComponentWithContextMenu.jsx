@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import ContextMenuList from './ContextMenuList';
 import ContextMenuItem from './ContextMenuItem';
 import './style.css';
 
@@ -94,7 +95,7 @@ export default class ComponentWithContextMenu extends Component {
                 <div hidden={!this.state.isMenuVisible} ref={ref => {
                     this.contextMenuRoot = ref
                 }} className="contextMenu">
-                    {options.map((option,idx) => <ContextMenuItem key={idx} {...option}/>)}
+                    <ContextMenuList options={options}/>
                 </div>
             </div>
         );
