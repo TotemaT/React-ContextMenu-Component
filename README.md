@@ -16,6 +16,15 @@ Run the sample app with the following commands
   npm start
 ```
 
+## Screenshots
+
+The div shown underneath is rendered using <ContextMenu /> :
+![Context Menu before click](./sample/screenshots/1-before.png "Context Menu before click")
+The context menu is shown after a right click :
+![Context Menu after right click](./sample/screenshots/2-shown.png "Context Menu after click")
+The item is hovered :
+![Context Menu item hovered](./sample/screenshots/3-selected.png "Context Menu item hovered")
+
 # Todo
 
 - [ ] Test ContextMenu
@@ -25,4 +34,4 @@ Run the sample app with the following commands
 - [X] Publish on npm
 - [ ] Write a quick start guide
 - [X] Add a sample
-- [ ] Add screenshots
+- [X] Add screenshots
