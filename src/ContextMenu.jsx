@@ -75,10 +75,7 @@ export default class ContextMenu extends Component {
     }
 
     handleClick(event) {
-        const {isMenuVisible} = this.state;
-        const wasOutside = !(this.contextMenuRoot.contains(event.target));
-
-        if (wasOutside && isMenuVisible) {
+        if (this.state.isMenuVisible) {
             this.setState({isMenuVisible: false});
         }
     }
@@ -100,14 +97,14 @@ export default class ContextMenu extends Component {
     }
 }
 
-ComponentWithContextMenu.propTypes = {
+ContextMenu.propTypes = {
     id: PropTypes.string.isRequired,
     options: PropTypes.array.isRequired,
     onClick: PropTypes.func,
     className: PropTypes.string
 };
 
-ComponentWithContextMenu.defaultProps = {
+ContextMenu.defaultProps = {
     onClick: () => {},
     className: ''
 };
