@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import ContextMenuList from './ContextMenuList';
-import ContextMenuItem from './ContextMenuItem';
 import './style.css';
 
 /**
@@ -74,7 +73,7 @@ export default class ContextMenu extends Component {
         }
     }
 
-    handleClick(event) {
+    handleClick() {
         if (this.state.isMenuVisible) {
             this.setState({isMenuVisible: false});
         }

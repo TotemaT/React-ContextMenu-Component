@@ -99,5 +99,6 @@ Temporary Items
 .DS_Store
 .idea
 npm-debug.log
-node_modules
+**/node_modules
 dist/
+**/yarn.lock

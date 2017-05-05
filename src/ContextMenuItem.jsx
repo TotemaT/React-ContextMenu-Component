@@ -17,12 +17,12 @@ ContextMenuItem.propTypes = {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     disabled: PropTypes.bool
-}
+};
 
 ContextMenuItem.defaultProps = {
     label: '',
     onClick: () => { /* no-op */},
     disabled: false
-}
+};
 
 export default ContextMenuItem;
