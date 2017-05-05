@@ -14,7 +14,7 @@ const ContextMenuItem = ({label, onClick, disabled}) => {
 };
 
 ContextMenuItem.propTypes = {
-    label: PropTypes.string.required,
+    label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
     disabled: PropTypes.bool
 }
