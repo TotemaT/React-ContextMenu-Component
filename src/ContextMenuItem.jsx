@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContextMenuItem = ({label, onClick, disabled}) => {
-    let className = 'contextMenu--option';
+const ContextMenuItem = ({label, onClick, disabled, className}) => {
+    className += ' contextMenu--option';
     if (disabled) {
         className += ' contextMenu--option__disabled';
     }
@@ -16,13 +16,14 @@ const ContextMenuItem = ({label, onClick, disabled}) => {
 ContextMenuItem.propTypes = {
     label: PropTypes.string.isRequired,
     onClick: PropTypes.func,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    className: PropTypes.string
 };
 
 ContextMenuItem.defaultProps = {
-    label: '',
     onClick: () => { /* no-op */},
-    disabled: false
+    disabled: false,
+    className: ''
 };
 
 export default ContextMenuItem;

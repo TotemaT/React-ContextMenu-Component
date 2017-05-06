@@ -104,6 +104,6 @@ ContextMenu.propTypes = {
 };
 
 ContextMenu.defaultProps = {
-    onClick: () => {},
+    onClick: () => { /* no-op */},
     className: ''
 };
