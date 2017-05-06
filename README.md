@@ -85,7 +85,7 @@ The item is hovered :
 
 ![Context Menu item hovered](./sample/screenshots/3-selected.png "Context Menu item hovered")
 
-The delete item has a spaciel class making it red :
+The delete item has a special class making it red :
 
 ![Context Menu item with special css class](./sample/screenshots/4-className.png "Context Menu item with special css class")
 
