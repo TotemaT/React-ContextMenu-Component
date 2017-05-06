@@ -32,12 +32,12 @@ The ContextMenu component **has** to have the following props :
 ##### option
 An option is a single item rendered in the context menu. It contains the following properties :
 
-| Property | Type    | Explanation                                           | Default |
-| -------: | :-----: | :---------------------------------------------------- | :------ |
-| label    | string  | Label of the option, as seen in the context menu.     | N/A     |
-| onClick  | func    | Function to fire when the option is option is clicked | no op   |
-| disabled | boolean | Whether the option is disabled                        | false   |
-
+| Property  | Type    | Explanation                                           | Default |
+| --------: | :-----: | :---------------------------------------------------- | :------ |
+| label     | string  | Label of the option, as seen in the context menu.     | N/A     |
+| onClick   | func    | Function to fire when the option is option is clicked | no op   |
+| disabled  | boolean | Whether the option is disabled                        | false   |
+| className | string  | Name of the CSS class to apply on this given option   | ""      |
 
 ### ContextMenu optional props
 
