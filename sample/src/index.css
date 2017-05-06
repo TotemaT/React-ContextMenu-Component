@@ -12,3 +12,7 @@ body {
   border: 1px solid black;
   text-align: center;
 }
+
+.delete-item {
+    color: red;
+}

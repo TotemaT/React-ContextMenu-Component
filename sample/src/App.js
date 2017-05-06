@@ -18,7 +18,8 @@ class App extends Component {
             [
                 {
                     label: 'Delete',
-                    onClick: () => console.log('delete')
+                    onClick: () => console.log('delete'),
+                    className: 'delete-item '
                 }
             ]
         ];

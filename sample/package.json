@@ -4,7 +4,7 @@
     "license": "MIT",
     "dependencies": {
         "react": "^15.5.4",
-        "react-contextmenu-component": "^0.1.1",
+        "react-contextmenu-component": "^0.1.7",
         "react-dom": "^15.5.4"
     },
     "devDependencies": {

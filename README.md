@@ -74,11 +74,21 @@ Run the sample app with the following commands
 ## Screenshots
 
 The div shown underneath is rendered using `<ContextMenu />` :
+
 ![Context Menu before click](./sample/screenshots/1-before.png "Context Menu before click")
+
 The context menu is shown after a right click :
+
 ![Context Menu after right click](./sample/screenshots/2-shown.png "Context Menu after click")
+
 The item is hovered :
+
 ![Context Menu item hovered](./sample/screenshots/3-selected.png "Context Menu item hovered")
+
+The delete item has a spaciel class making it red :
+
+![Context Menu item with special css class](./sample/screenshots/4-className.png "Context Menu item with special css class")
+
 
 # Thanks
 
