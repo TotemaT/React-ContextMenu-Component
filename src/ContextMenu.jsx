@@ -4,7 +4,7 @@ import ContextMenuList from './ContextMenuList';
 import './style.css';
 
 /**
- * This component add a contextmenu event listener, allowing to show a custom menu on right click.
+ * This component adds a contextmenu event listener, allowing to show a custom menu on right click.
  */
 export default class ContextMenu extends Component {
     constructor() {
