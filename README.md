@@ -3,7 +3,16 @@
 
 React component that adds a context menu to any component
 
+## Install
+
+```
+npm install react-contextmenu-component --save
+# OR
+yarn add react-contextmenu-component
+```
+
 ## Quick start
+
 The only component needed to add a context menu is `<ContextMenu />`. To use it, simply wrap the component that needs to have a context menu with the ContextMenu component like so :
 
 ```
