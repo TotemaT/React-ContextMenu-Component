@@ -31,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ContextMenu onClick={onClick} options={this.getOptions()} id="context-menu-container" className="context-menu-container">
+                <ContextMenu onClick={onClick} hideMenu={true} options={this.getOptions()} id="context-menu-container" className="context-menu-container">
                     <p>Right-click anywhere on me to show the context menu ;)</p>
                 </ContextMenu>
             </div>

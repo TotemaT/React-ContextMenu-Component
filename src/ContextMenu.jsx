@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ContextMenuList from './ContextMenuList';
 import './style.css';
@@ -28,12 +28,12 @@ export default class ContextMenu extends Component {
     }
 
     handleGlobalContextMenu(event) {
-        const {isMenuVisible} = this.state;
+        const { isMenuVisible } = this.state;
         const wasOutside = !(this.root.contains(event.target));
 
         if (wasOutside) {
             if (isMenuVisible) {
-                this.setState({isMenuVisible: false});
+                this.setState({ isMenuVisible: false });
             }
         } else {
             this.handleContextMenu(event);
@@ -42,7 +42,7 @@ export default class ContextMenu extends Component {
 
     handleContextMenu(event) {
         event.preventDefault();
-        this.setState({isMenuVisible: true});
+        this.setState({ isMenuVisible: true });
 
         const clickX = event.clientX;
         const clickY = event.clientY;
@@ -75,21 +75,25 @@ export default class ContextMenu extends Component {
 
     handleClick() {
         if (this.state.isMenuVisible) {
-            this.setState({isMenuVisible: false});
+            this.setState({ isMenuVisible: false });
         }
     }
 
     render() {
-        let {options, id, onClick, children, className} = this.props;
-        if (!options) {
-            return <div>{children}</div>;
+        let { children, className, hideMenu, id, onClick, options } = this.props;
+        if (hideMenu) {
+            return (
+                <div id={id} className={className} onClick={onClick}>
+                    {children}
+                </div>
+            );
         }
 
         return (
             <div id={id} onClick={onClick} className={className} ref={ref => this.root = ref}>
                 {children}
                 <div hidden={!this.state.isMenuVisible} ref={ref => this.contextMenuRoot = ref} className="contextMenu">
-                    <ContextMenuList options={options}/>
+                    <ContextMenuList options={options} />
                 </div>
             </div>
         );
@@ -97,13 +101,17 @@ export default class ContextMenu extends Component {
 }
 
 ContextMenu.propTypes = {
+    children: PropTypes.node,
+    className: PropTypes.string,
+    hideMenu: PropTypes.bool,
     id: PropTypes.string.isRequired,
-    options: PropTypes.array.isRequired,
     onClick: PropTypes.func,
-    className: PropTypes.string
+    options: PropTypes.array.isRequired
 };
 
 ContextMenu.defaultProps = {
-    onClick: () => { /* no-op */},
-    className: ''
+    children: null,
+    className: '',
+    hideMenu: false,
+    onClick: () => { /* no-op */ }
 };
