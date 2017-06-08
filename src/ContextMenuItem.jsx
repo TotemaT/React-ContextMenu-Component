@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContextMenuItem = ({label, onClick, disabled, className}) => {
+const ContextMenuItem = ({ label, onClick, disabled, className }) => {
     className += ' contextMenu--option';
     if (disabled) {
         className += ' contextMenu--option__disabled';
     }
     return (
-        <div className={className} onClick={onClick} disabled={disabled}>
+        <div className={className}
+            onClick={(event) => {
+                event.stopPropagation();
+                onClick();
+            }}
+            disabled={disabled}
+        >
             {label}
         </div>
     );
@@ -21,7 +27,7 @@ ContextMenuItem.propTypes = {
 };
 
 ContextMenuItem.defaultProps = {
-    onClick: () => { /* no-op */},
+    onClick: () => { /* no-op */ },
     disabled: false,
     className: ''
 };

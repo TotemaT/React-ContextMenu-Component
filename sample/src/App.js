@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 import './App.css';
 import ContextMenu from 'react-contextmenu-component';
 
+const onClick = () => {
+    console.log('Clicked');
+};
+
 class App extends Component {
     getOptions() {
         return [
@@ -27,7 +31,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <ContextMenu options={this.getOptions()} id="context-menu-container" className="context-menu-container">
+                <ContextMenu onClick={onClick} options={this.getOptions()} id="context-menu-container" className="context-menu-container">
                     <p>Right-click anywhere on me to show the context menu ;)</p>
                 </ContextMenu>
             </div>
