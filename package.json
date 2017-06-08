@@ -1,6 +1,6 @@
 {
   "name": "react-contextmenu-component",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "entry": "dist/index.js",
   "description": "React component that adds a context menu to any component.",
   "repository": {
