@@ -18,16 +18,24 @@ export default class ContextMenu extends Component {
     }
 
     componentDidMount() {
-        document.addEventListener('contextmenu', this.handleGlobalContextMenu);
-        document.addEventListener('click', this.handleClick);
+        if (!this.props.hideMenu) {
+            document.addEventListener('contextmenu', this.handleGlobalContextMenu);
+            document.addEventListener('click', this.handleClick);
+        }
     }
 
     componentWillUnmount() {
-        document.removeEventListener('contextmenu', this.handleGlobalContextMenu);
-        document.removeEventListener('click', this.handleClick);
+        if (!this.props.hideMenu) {
+            document.removeEventListener('contextmenu', this.handleGlobalContextMenu);
+            document.removeEventListener('click', this.handleClick);
+        }
     }
 
     handleGlobalContextMenu(event) {
+        if (this.props.hideMenu) {
+            return;
+        }
+
         const { isMenuVisible } = this.state;
         const wasOutside = !(this.root.contains(event.target));
 
@@ -41,6 +49,10 @@ export default class ContextMenu extends Component {
     }
 
     handleContextMenu(event) {
+        if (this.props.hideMenu) {
+            return;
+        }
+
         event.preventDefault();
         this.setState({ isMenuVisible: true });
 
@@ -74,6 +86,10 @@ export default class ContextMenu extends Component {
     }
 
     handleClick() {
+        if (this.props.hideMenu) {
+            return;
+        }
+
         if (this.state.isMenuVisible) {
             this.setState({ isMenuVisible: false });
         }
